@@ -1,10 +1,16 @@
-name = "SpanningSupernet"
+name = "SpanningSupernets"
 uuid = "c92b83c4-19af-4bf9-9c50-c65f2b7803f9"
-authors = ["Jake Ireland <jakewilliami@icloud.com> and contributors"]
-version = "1.0.0-DEV"
+authors = ["Jake Ireland <jakewilliami@icloud.com>"]
+version = "0.1.0"
+
+[deps]
+IPNets = "66763231-799b-5fff-8662-389acfc33a85"
+Sockets = "6462fe0b-24de-5631-8697-dd941f90decc"
 
 [compat]
-julia = "1.6.7"
+IPNets = "1"
+Sockets = "1"
+julia = "1"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
