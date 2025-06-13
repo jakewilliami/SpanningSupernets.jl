@@ -56,7 +56,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: julia-actions/setup-julia@latest
-      - uses: extractions/setup-just@v1  # or taiki-e/install-action@just
+      - uses: extractions/setup-just@v3  # or taiki-e/install-action@just
       - run: |
           just docs
         env:
@@ -68,7 +68,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: julia-actions/setup-julia@latest
-      - uses: extractions/setup-just@v1  # or taiki-e/install-action@just
+      - uses: extractions/setup-just@v3  # or taiki-e/install-action@just
 
       # Adapted from:
       #   github.com/FluxML/Flux.jl/blob/7be1ca7a/.github/workflows/JuliaFormatter.yml
