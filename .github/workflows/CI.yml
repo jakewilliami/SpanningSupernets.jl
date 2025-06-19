@@ -74,3 +74,17 @@ jobs:
       - uses: extractions/setup-just@v3  # or taiki-e/install-action@just
       - uses: astral-sh/setup-uv@v6
       - run: just fmt
+
+      # Adapted from:
+      #   github.com/FluxML/Flux.jl/blob/7be1ca7a/.github/workflows/JuliaFormatter.yml
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            file_change:
+              - added|modified: '**/*'
+      - run: just fmt
+      - name: Check formatting diff
+        if: steps.filter.outputs.file_change == 'true'
+        run: |
+          git diff --color=always --exit-code

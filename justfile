@@ -65,7 +65,7 @@ fmt_py:
 # Install JuliaFormatter
 [private]
 install-formatter:
-    julia --project=@JuliaFormatter -e 'import Pkg; Pkg.add("JuliaFormatter")'
+    julia --project=@JuliaFormatter -e 'import Pkg; Pkg.add(name="JuliaFormatter", version="1.0.62")'
 
 # Instantiate main project
 instantiate:
