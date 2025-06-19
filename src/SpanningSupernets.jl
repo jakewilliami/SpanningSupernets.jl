@@ -7,7 +7,7 @@ using Sockets, IPNets
 # Check if prospective network is valid; adapted from
 #   github.com/JuliaWeb/IPNets.jl/blob/92a9364b/src/IPNets.jl#L36-L58
 #   github.com/python/cpython/blob/3cb10979/Lib/ipaddress.py#L1537-L1538
-function Base.isvalid(::Type{IPv4Net}, network::Tuple{IPv4,Integer})
+function Base.isvalid(::Type{IPv4Net}, network::Tuple{IPv4, Integer})
     # Extract netaddr and netmask
     netaddr₀, prefix_length = network
     netaddr = netaddr₀.host
@@ -80,9 +80,7 @@ function spanning_supernet(ips::Vector{IPv4})
         network.netaddr ≤ n₀ && n₁ ≤ broadcastaddr(network) && return network
     end
 
-    return error(
-        "It may be impossible to calculate a supernet with all given IPs.  Please submit a bug report.",
-    )
+    return error("It may be impossible to calculate a supernet with all given IPs.  Please submit a bug report.",)
 end
 
 end
