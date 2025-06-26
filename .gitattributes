@@ -1,0 +1,8 @@
+# Ignore Python program as it is only auxiliary to the
+# main Julia library.  We can override Linguist:
+#   stackoverflow.com/a/43520676
+#   github.com/github-linguist/linguist/blob/edbbb746/docs/overrides.md
+#
+# See also:
+#   github.com/github-linguist/linguist/issues/7464
+test/spanning-supernets-py/* linguist-vendored
