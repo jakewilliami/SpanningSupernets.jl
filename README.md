@@ -9,7 +9,7 @@ This library provides an algorithm, via the `spanning_supernet` function, to cal
 
 ## Quick Start
 
-```julia
+```julia-repl
 julia> using Sockets, SpanningSupernets
 
 julia> spanning_supernet([ip"20.171.207.220", ip"20.171.207.211", ip"20.171.207.226", ip"20.171.207.239"])
