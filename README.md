@@ -22,7 +22,7 @@ Ensure you have both [UV](https://github.com/astral-sh/uv) and [Just](https://gi
 
 To run unit tests, simply run:
 
-```commandline
+```shell
 $ just test
 # ...
 ```
@@ -31,13 +31,13 @@ I am using an [independent Python version of this library](./tests/spanning-supe
 
 We also use UV to conveniently run pre-commit:
 
-```commandline
+```shell
 $ just fmt
 ```
 
 In order to commit, you will want to ensure pre-commits are installed:
 
-```commandline
+```shell
 $ uvx pre-commit install
 ```
 
